@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="src/style.css">
     <link rel="stylesheet" 
         href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" 
         crossorigin="anonymous">
+    <link rel="stylesheet" href="src/style.css">
     <title>Weather App</title>
-</head>
-<body>
-  <div class="container">
+  </head>
+  <body>
+    <div class="container">
      <div class="weatherApp">
         <div class="enterCity">
           <form class="search-form">
@@ -51,7 +51,7 @@
               <h1>
                Munich
               </h1>
-              <span>12</span>
+              <span class="currTemperature" id = "currTemperature">12</span>
               <ul class="dateTime">
                 <li>
                   June 12
@@ -62,14 +62,15 @@
               </ul>
             </div>
             <div class="col-6">
-               <img src="" alt="flower">
+               <img src="image/Monstera_3.gif" alt="flower" class="flower">
             </div>
           </div>
         </div>
         <div class="row">
           <div class="col-2">
-            <img src=""
-             alt="sun">
+            <img src="image/animated-sun-with.png" 
+            class="largeImage"
+            alt="sun">
           </div>
           <div class="col-6">
             <ul class="weatherParam">
@@ -103,7 +104,7 @@
           </div>
         </div>
         <hr>
-        <div class="row">
+        <div class="row" id="futureForecast">
           <div class="col-xs-2 firstOffset day">
             <h3 class="hourForecast">
               09:00
@@ -118,7 +119,7 @@
               8C
             </div>
           </div>
-          <div class="col-xs-2 day">
+          <div class="col-xs-2 firstOffset day">
             <h3 class="hourForecast">
               09:00
             </h3>
@@ -132,7 +133,7 @@
               8C
             </div>
           </div>
-          <div class="col-xs-2 day">
+          <div class="col-xs-2 firstOffset day">
             <h3 class="hourForecast">
               09:00
             </h3>
@@ -146,7 +147,7 @@
               8C
             </div>
           </div>
-          <div class="col-xs-2 day">
+          <div class="col-xs-2 firstOffset day">
             <h3 class="hourForecast">
               09:00
             </h3>
@@ -160,7 +161,7 @@
               8C
             </div>
           </div>
-          <div class="col-xs-2 day">
+          <div class="col-xs-2 firstOffset day">
             <h3 class="hourForecast">
               09:00
             </h3>
@@ -176,11 +177,11 @@
           </div>
         </div>
      </div>
-  </div>
+    </div>
     <div class="footer">
-      <a href="https://github.com/AleksLat/Green-Weather-App">Open-spurce code</a>
+      <a href="https://github.com/AleksLat/Green-Weather-App">Open-source code</a>
       by Aleks Lat
     </div>
     <script src="src/script.js"></script>
-</body>
+  </body>
 </html>

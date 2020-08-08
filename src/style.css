@@ -1,0 +1,70 @@
+body{
+  background-color:#353a40;
+  color: #DFE1E0
+}
+h1{
+  font-size: 200%;
+}
+hr{
+  border-color: #DFE1E0;
+}
+ul{
+  list-style-type: none;
+  padding: 0 0 0 10px;
+}
+li:first-letter{
+  text-transform: capitalize;
+}
+.container {
+  background-color: #1B3F3B;
+  border: 2px solid  #DFE1E0;
+  border-radius: 5px;
+  display: block;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 15px 15px;
+  margin: 0 auto;
+  width: 400px;
+}
+.footer {
+  display: block;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0 auto;
+  text-align: center;
+}
+.flower{
+  height:150px;
+  width: 150px;
+}
+.firstOffset {
+  margin-left: 4.5%;
+}
+.futureDays{
+  margin: 0 auto; 
+}
+.currTemperature{
+  font-size: 50px;
+  position: relative;
+  
+}
+.day {
+  border:1px solid  #DFE1E0;
+  border-radius: 5px;
+  padding: 2px;
+  text-align: center;
+}
+.hourForecast{
+  font-size: 16px;
+}
+.weatherParam {
+  text-align: right;
+}
+.weatherData {
+  text-align: left;
+}
+.largeImage{
+  position: relative;
+  left: 2px;
+  top: 10px;
+  height: 150px;
+  width: 150px;
+}
