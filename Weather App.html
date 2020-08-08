@@ -8,13 +8,179 @@
         href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" 
         crossorigin="anonymous">
-    
     <title>Weather App</title>
 </head>
 <body>
-    <h1>
-        Weather App
-    </h1>
+  <div class="container">
+     <div class="weatherApp">
+        <div class="enterCity">
+          <form class="search-form">
+            <div class="row">
+              <div class="col-6">
+                <input
+                 type="text"
+                 id="city-input"
+                 placeholder="City name"
+                 autocomplete="off"
+                 class="form-control shadow-sm"
+                />
+              </div>
+              <div class="col-3">
+                <input 
+                type="submit" 
+                id="submit-info"
+                value="🔍"
+                class="form-control"
+                />
+              </div>
+              <div class="col-3">
+                <input 
+                type="submit" 
+                id="local-submit-info"
+                value="🌎"
+                class="form-control"
+                />
+              </div>
+            </div>
+          </form>
+        </div>
+        <hr/>
+        <div class="result">
+          <div class="row">
+            <div class="col-6">
+              <h1>
+               Munich
+              </h1>
+              <span>12</span>
+              <ul class="dateTime">
+                <li>
+                  June 12
+                </li>
+                <li>
+                  Clouds
+                </li>
+              </ul>
+            </div>
+            <div class="col-6">
+               <img src="" alt="flower">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-2">
+            <img src=""
+             alt="sun">
+          </div>
+          <div class="col-6">
+            <ul class="weatherParam">
+              <li>
+                Humidity
+              </li>
+              <li>
+                Pressure
+              </li>
+              <li>
+                Wind
+              </li>
+            </ul>
+          </div>
+          <div class="col-4">
+            <ul class="weatherData">
+              <li>
+                <span id="humidity"></span>
+                %
+              </li>
+              <li id="pressure">
+                <span>
+                  10
+                </span>
+                N/m2
+              </li>
+              <li>
+                <span id="Wind-speed"></span>
+              km/hr</li>
+            </ul>
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-xs-2 firstOffset day">
+            <h3 class="hourForecast">
+              09:00
+            </h3>
+            <img src="" alt="icon">
+            <div class="temperatureMax">
+              <strong>
+                12C
+              </strong>
+            </div>
+            <div class="temperatureMin">
+              8C
+            </div>
+          </div>
+          <div class="col-xs-2 day">
+            <h3 class="hourForecast">
+              09:00
+            </h3>
+            <img src="" alt="icon">
+            <div class="temperatureMax">
+              <strong>
+                12C
+              </strong>
+            </div>
+            <div class="temperatureMin">
+              8C
+            </div>
+          </div>
+          <div class="col-xs-2 day">
+            <h3 class="hourForecast">
+              09:00
+            </h3>
+            <img src="" alt="icon">
+            <div class="temperatureMax">
+              <strong>
+                12C
+              </strong>
+            </div>
+            <div class="temperatureMin">
+              8C
+            </div>
+          </div>
+          <div class="col-xs-2 day">
+            <h3 class="hourForecast">
+              09:00
+            </h3>
+            <img src="" alt="icon">
+            <div class="temperatureMax">
+              <strong>
+                12C
+              </strong>
+            </div>
+            <div class="temperatureMin">
+              8C
+            </div>
+          </div>
+          <div class="col-xs-2 day">
+            <h3 class="hourForecast">
+              09:00
+            </h3>
+            <img src="" alt="icon">
+            <div class="temperatureMax">
+              <strong>
+                12C
+              </strong>
+            </div>
+            <div class="temperatureMin">
+              8C
+            </div>
+          </div>
+        </div>
+     </div>
+  </div>
+    <div class="footer">
+      <a href="https://github.com/AleksLat/Green-Weather-App">Open-spurce code</a>
+      by Aleks Lat
+    </div>
     <script src="src/script.js"></script>
 </body>
 </html>
