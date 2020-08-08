@@ -47,7 +47,8 @@ function showTemperature(response){
 
 
 let apiKey="577759180b250273cb6dd606dacb4cd6";
-let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=Minsk&appid=${apiKey}&units=metric`;
+let city = "Munich"
+let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
 axios.get(apiUrl).then(showTemperature)
  
