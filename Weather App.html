@@ -7,6 +7,7 @@
         href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" 
         crossorigin="anonymous">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css">
     <title>Weather App</title>
   </head>
@@ -49,15 +50,15 @@
           <div class="row">
             <div class="col-6">
               <h1>
-               Munich
+                <p id="choosencity">Munich</p>
               </h1>
               <span class="currTemperature" id = "currTemperature">12</span>
-              <ul class="dateTime">
-                <li>
+              <ul class="dateTime" id="dateTime-info">
+                <li class="dateMonth" id="date">
                   June 12
                 </li>
                 <li>
-                  Clouds
+                  <span id="description">Clouds</span>
                 </li>
               </ul>
             </div>
@@ -70,7 +71,8 @@
           <div class="col-2">
             <img src="image/animated-sun-with.png" 
             class="largeImage"
-            alt="sun">
+            alt="sun"
+            class=float-left>
           </div>
           <div class="col-6">
             <ul class="weatherParam">
@@ -98,7 +100,7 @@
                 N/m2
               </li>
               <li>
-                <span id="Wind-speed"></span>
+                <span id="wind-speed"></span>
               km/hr</li>
             </ul>
           </div>
