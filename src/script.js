@@ -35,8 +35,10 @@ function showTemperature(response){
     let windElement = document.querySelector("#wind-speed");
     let dateElement= document.querySelector("#date");
     let iconElement= document.querySelector("#icon");
+
+    celsiusTemp = response.data.main.temp;
    
-    tempElement.innerHTML=Math.round(response.data.main.temp);
+    tempElement.innerHTML=Math.round(celsiusTemp);
     cityElement.innerHTML=response.data.name;
     descripElement.innerHTML=response.data.weather[0].description;
     humidElement.innerHTML=response.data.main.humidity;
@@ -63,8 +65,34 @@ function handleSubmit(event){
     search(cityInputElement.value);
   }
 
+  function showfahrenheitTemp(event) {
+    event.preventDefault();
+    let fahrenheitTemp = (celsiusTemp*9)/5+32;
+  
+    celsiusLink.classList.remove("active");
+    fahrenheitLink.classList.add("active");
+    let tempElement=document.querySelector("#currTemperature");
+    tempElement.innerHTML=Math.round(fahrenheitTemp);
+  }
+  
+  function showcelsiusTemp(event) {
+    event.preventDefault(); 
+    celsiusLink.classList.add("active");
+    fahrenheitLink.classList.remove("active");
+    let tempElement=document.querySelector("#currTemperature");
+    tempElement.innerHTML = Math.round(celsiusTemp);
+  }
+
+let celsiusTemp = null;
+
 let searchform = document.querySelector("#search-form");
 searchform.addEventListener("submit", handleSubmit);
+
+let fahrenheitLink=document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", showfahrenheitTemp);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", showcelsiusTemp );
 
 search("San Francisco");
  
