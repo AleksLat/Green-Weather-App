@@ -34,6 +34,7 @@ function showTemperature(response){
     let pressureElement = document.querySelector("#pressure");
     let windElement = document.querySelector("#wind-speed");
     let dateElement= document.querySelector("#date");
+    let iconElement= document.querySelector("#icon");
    
     tempElement.innerHTML=Math.round(response.data.main.temp);
     cityElement.innerHTML=response.data.name;
@@ -42,7 +43,9 @@ function showTemperature(response){
     pressureElement.innerHTML=response.data.main.pressure;
     windElement.innerHTML=Math.round(response.data.wind.speed);
     dateElement.innerHTML=formatDate(response.data.dt*1000);
-   
+    iconElement.setAttribute("src", 
+        `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+
    }
 
 
