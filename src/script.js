@@ -49,10 +49,22 @@ function showTemperature(response){
             response.data.weather[0].description);
    }
 
+   function search(city) {
+    let apiKey="577759180b250273cb6dd606dacb4cd6";
+    let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(showTemperature)
+  
+  }
 
-let apiKey="577759180b250273cb6dd606dacb4cd6";
-let city = "Munich"
-let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
-axios.get(apiUrl).then(showTemperature)
+function handleSubmit(event){
+    event.preventDefault();
+    let cityInputElement = document.querySelector("#city-input"); 
+    search(cityInputElement.value);
+  }
+
+let searchform = document.querySelector("#search-form");
+searchform.addEventListener("submit", handleSubmit);
+
+search("San Francisco");
  
