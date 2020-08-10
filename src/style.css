@@ -80,3 +80,8 @@ li:first-letter{
 .weatherTemperature .active:hover{
   text-decoration:none ;
 }
+img.smallImage{
+  width:50px;
+  height: 50px;
+
+}
